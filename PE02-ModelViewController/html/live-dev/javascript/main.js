@@ -1,4 +1,4 @@
-// responsible for fetching, processing, and defining data
+/************************** responsible for fetching, processing, and defining data  **************************/
 var Model = {
 	Ball: {
 		view: null,  // the model keeps an eye on the view
@@ -18,7 +18,7 @@ var Model = {
 	}
 };
 
-// responsible for updating the screen - NO DATA PROCESSING
+/************************** responsible for updating the screen - NO DATA PROCESSING  **************************/
 var View = {
 	Ball: {
 		element: null, // the view keeps an eye in its elements
@@ -33,7 +33,7 @@ var View = {
 	}
 };
 
-// responsible for receiving input from the user and passing it to the model (or the view through the model)
+/******* responsible for receiving input from the user and passing it to the model (or the view through the model)  *******/
 var Controller = {
 	Ball: {
 		model: null,  // controller keeps an eye on the model
@@ -48,6 +48,7 @@ var Controller = {
 	},
 };
 
+/********************************************** Big Bang **********************************************/
 (function() {
 	setInterval(function(){
 		Object.create(Controller.Ball).init();
