@@ -1,0 +1,24 @@
+/* in css somethings must be defined first in order for others to work! */
+
+html, body {  /* necessary to the margin 100% to work */
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.ball {
+	width: 50px;
+	height: 50px;
+	background-color: #3b4ba3;
+	border-radius: 50%;
+}
+
+.stage {
+	position: relative;  /* position cannot be set to static if you want to hide part of objects that might scape this container */
+	/* a possible explanation why it doesn't work with static is that with static the top, right, bottom, and left are not in effect 
+	- this must be set first in order for the computer to know the boundaries */
+	width: 100%;
+	height: 100%;
+	background-color: #333;
+	overflow: hidden; /* interesting for Marvin */
+}
