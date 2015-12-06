@@ -1,0 +1,42 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.ball {
+	position: absolute;
+	width: 20px;
+	height: 20px;
+	background-color: #3b4ba3;
+	border-radius: 50%;
+}
+
+.stage {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	background-color: #333;
+	overflow: hidden;
+}
+
+.pacman {
+	width: 50px;
+	height: 50px;
+	position: absolute;
+	background-color: #FFFF00;
+	border-radius: 50%;
+}
+
+.infobox {
+	position: absolute;
+	left: 0;
+	top: 0;
+	padding: 0;
+	margin: 0;
+	border: 0;
+	width: 100%;
+	opacity: 0.7;
+	color: #FFF;
+	text-shadow: 1px 1px #333;
+}
