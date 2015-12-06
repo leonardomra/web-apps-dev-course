@@ -74,8 +74,8 @@ var Model = {
 			}
 		},
 		calculateColorBasedOnMotion: function(value) {
-			var amplifiedValue = Math.floor(Math.abs(1.6 * parseFloat(window.Model.DeviceMotionDemo.numberBeautifier(value))));
-			var duplicatedValue = Array(3).join(window.Model.DeviceMotionDemo.decimalToHexadecimalConverter(amplifiedValue).charAt(0));
+			var amplifiedValue = Math.floor(Math.abs(1.6 * parseFloat(this.numberBeautifier(value))));
+			var duplicatedValue = Array(3).join(this.decimalToHexadecimalConverter(amplifiedValue).charAt(0));
 			return duplicatedValue;
 		},
 		decimalToHexadecimalConverter: function(value) {
@@ -108,9 +108,9 @@ var Model = {
 			information += jumpLine;
 			information += " gamma:" + window.Model.DeviceMotionDemo.numberBeautifier(e.gamma);
 			// background color change
-			var redX = window.Model.DeviceMotionDemo.calculateColorBasedOnMotion(e.alpha);  // borrowing something I need from a friend "DeviceMotionDemo"
-			var greenY = window.Model.DeviceMotionDemo.calculateColorBasedOnMotion(e.beta);
-			var blueZ = window.Model.DeviceMotionDemo.calculateColorBasedOnMotion(e.gamma);
+			var redX = this.calculateColorBasedOnOrientation(e.alpha);  // from 0 to 360, Chrome EMULATOR: from -180 to 180; represents x
+			var greenY = this.calculateColorBasedOnOrientation(e.beta);  // from -180 to 180; represents y
+			var blueZ = this.calculateColorBasedOnOrientation(e.gamma);  // from -90 to 90; represents z
 			information += jumpLine;
 			information += " redX|" + redX;
 			information += jumpLine;
@@ -119,6 +119,12 @@ var Model = {
 			information += " blueZ|" + blueZ;
 			this.view.update(information);
 			this.view.changeBackgroundColorBasedOnMotion('#'+redX+greenY+blueZ);
+		},
+		calculateColorBasedOnOrientation: function(value) {
+			console.log(value);
+			var amplifiedValue = Math.floor(Math.abs(0.088 * parseFloat(window.Model.DeviceMotionDemo.numberBeautifier(value))));  // calculate based on 180 degrees
+			var duplicatedValue = Array(3).join(window.Model.DeviceMotionDemo.decimalToHexadecimalConverter(amplifiedValue).charAt(0));
+			return duplicatedValue;
 		},
 	},
 	
