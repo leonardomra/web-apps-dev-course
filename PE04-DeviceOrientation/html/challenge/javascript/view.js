@@ -17,8 +17,7 @@ var View = {
 			stage.appendChild(this.element);
 		},
 		disappear: function(e) {
-			var self = (e === undefined ? this.element : e.target);
-			self.style.display = 'none';
+			e.taget.style.display = 'none';
 		},
 	},
 
