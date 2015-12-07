@@ -22,6 +22,14 @@
 /* HOMEWORK - implement collision detection by pasting the 4 chunks */
 /* of code in the right place (model.js, view.js, controller.js)    */
 /*------------------------------------------------------------------*/
+/*------------------------------------------------------------------*/
+/* IMPORTANT: Write 4 sentences next to the chunks you have pasted  */
+/* explaining the reasons of your devision.                         */
+/* Example: "I placed the following code inside the Model of the    */
+/* Pacman, because the model is responsible for processing data,    */
+/* and this function is related to..."                              */
+/*------------------------------------------------------------------*/
+/*------------------------------------------------------------------*/
 /* CHUNK A:                                                         */
 	/*
 	toBeEaten: function() {
