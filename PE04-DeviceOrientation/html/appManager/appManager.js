@@ -4,6 +4,7 @@
 /*                                                                  */
 /* |-- yourProject                                                  */
 /* |   |-- javascript                                               */
+/* |   |-- appManager.js                                            */
 /* |       |-- app01                                                */
 /* |           |-- main.js                                          */
 /* |           |-- model.js                                         */
