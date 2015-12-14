@@ -60,6 +60,11 @@ var Model = {
 			var verticalAdjustmentScale = (this.stage.getBoundingClientRect().height/2)/90;
 			return this.calculateVerticalCenterOfElementOnStage(this.view.element, this.stage) + (beta * verticalAdjustmentScale);
 		},
+		// SOLUTION:
+		// The function digest is responsible to detect if objects (Pacman, Balls) touch each other. The Pacman is the one who digest the biscuits. 
+		// So the name of the function is already a strong indication that it belongs to the Pacman instead the Balls.
+		// In addition, another strong hint is the "variable" (key) "observedBiscuits" that belongs to the model of the Pacman and it's used inside of this function.
+		// This variable/key is the one how allows for the detection to occur taking into account all Balls on the stage. This variable/key is updated by the "biscuitProductionQueue" (setInterval) whenever a new biscuit is created.
 		digest: function() {
 			var eaterRadius = this.view.element.offsetWidth/2;
 			for (var b in this.observedBiscuits) {
