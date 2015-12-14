@@ -1,0 +1,158 @@
+/** -----------------------------------
+ * Assignment 05: Inspiration Gallery
+ ** ----------------------------------- */
+
+/* Choose different box-model */
+
+* {
+  box-sizing: border-box;
+}
+
+/* Generic page elements */
+
+html {
+  font: 100%/1.375 sans-serif;
+}
+
+body {
+  width: 90%;
+  max-width: 75rem;
+  margin: 0 auto;
+  padding: 2.75rem;
+  background: white;
+}
+
+h2 {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Common box styling */
+
+.box {
+  border: 1px solid #000;
+  color: #000;
+  background: #fff;
+}
+
+/* Button styling */
+
+.btn {
+  display: inline-block;
+  vertical-align: middle;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+}
+
+/* Application component */
+
+.dashboard {
+  padding: 1.375rem;
+  border: 1px solid #000;
+  background: #f2f2f2;
+}
+
+  .component {
+    position: relative; /* Act as anchor for enumerations */
+    display: inline-block;
+    vertical-align: top;
+    width: 100%;
+    min-height: 15rem;
+    margin-right: -4px; /* Remove gap between inline-blocks */
+    padding: 1.375rem;
+    margin-bottom: 1.375rem; /* Vertical gutter */
+    overflow: visible; /* Hack clearfix */
+  }
+
+    .component__enum {
+      position: absolute; /* Position relative to parent origin */
+      top: 1.375em;
+      left: -1em;
+      padding: 0.25em 0.5em;
+      z-index: 1; /* Ensure element is on top of the stack */
+      box-shadow: 1px 2px 2px rgba(0, 0, 0, .2);
+    }
+
+    .component__thumb {
+      float: right;
+      margin-left: 0.5em;
+    }
+
+@media screen and (min-width: 50em) {
+
+  .component {
+    width: 45%;
+    margin-left: 5%; /* Horizontal gutter */
+  }
+
+  .component--wide {
+    width: 95%;
+  }
+
+}
+
+@media screen and (min-width: 72em) {
+
+  .component {
+    width: 23%;
+    margin-left: 2%;
+  }
+
+  .component--wide {
+    width: 48%;
+  }
+
+}
+
+/* ToDo List styling */
+
+.todo-list {
+  list-style: none;
+  margin-left: 0;
+  padding-left: 1rem;
+  text-indent: -1rem;
+}
+
+  .task {
+    cursor: pointer;
+  }
+
+  .task::before {
+    content: '○';
+    margin-right: 0.5rem;
+  }
+
+  .task.is-done {
+    text-decoration: line-through;
+  }
+
+  .task.is-done::before {
+    content: '✓';
+    margin-right: 0.5rem;
+  }
+
+/* Inspiration Gallery styling */
+
+.album-item {
+  display: inline-block;
+  vertical-align: top;
+  width: 33.3333333%;
+  max-width: 150px;
+  margin: 0;
+  margin-right: -4px;
+  padding: 0.5em;
+}
+
+  .album-item__caption {
+    color: gray;
+    font-size: 0.875em;
+  }
+
+    .album-item__caption .btn {
+      width: 100%;
+    }
