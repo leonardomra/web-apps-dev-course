@@ -46,4 +46,5 @@
 /* 3: progress bar based on the information given by the            */
 /* AudioChannel - getProgressPercentageChannel() inside of          */
 /* the collectInfoSongAndUpdate() of the Player within the Model    */
+/* 4: Insert the Player on your Dashboard                           */
 /********************************************************************/
