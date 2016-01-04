@@ -44,5 +44,6 @@
 /* 1: volume up and down                                            */
 /* 2: function previousSong within the model                        */
 /* 3: progress bar based on the information given by the            */
-/* AudioChannel - getProgressPercentageChannel()                    */
+/* AudioChannel - getProgressPercentageChannel() inside of          */
+/* the collectInfoSongAndUpdate() of the Player within the Model    */
 /********************************************************************/
