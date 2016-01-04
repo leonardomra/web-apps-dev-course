@@ -39,7 +39,7 @@
 
 
 /********************************************************************/
-/* HOMEWORK 2 - Implement the following functionalities on the      */
+/* HOMEWORK  -  Implement the following functionalities on the      */
 /* mp3 player:                                                      */
 /* 1: volume up and down                                            */
 /* 2: function previousSong within the model                        */
