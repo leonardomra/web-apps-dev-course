@@ -1,0 +1,89 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.ball {
+	position: absolute;
+	width: 20px;
+	height: 20px;
+	border-radius: 50%;
+	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#f0b7a1+0,8c3310+50,752201+51,bf6e4e+100;Brown+Gloss */
+	background: #f0b7a1; /* Old browsers */
+	background: -moz-linear-gradient(-45deg,  #f0b7a1 0%, #8c3310 50%, #752201 51%, #bf6e4e 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(-45deg,  #f0b7a1 0%,#8c3310 50%,#752201 51%,#bf6e4e 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(135deg,  #f0b7a1 0%,#8c3310 50%,#752201 51%,#bf6e4e 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f0b7a1', endColorstr='#bf6e4e',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}
+
+.stage {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	background-color: #000;
+	overflow: hidden;
+}
+
+.timer {
+	position: absolute;
+	font-size: 30pt;
+	right: 0;
+	bottom: 10px;
+	padding: 0;
+	margin: 0;
+	border: 0;
+	width: 100%;
+	text-align: center;
+	background-color: transparent;
+	color: #FFF;
+	text-shadow: 1px 1px #333;
+}
+
+.highscore {
+	position: absolute;
+	font-size: 30pt;
+	right: 0;
+	bottom: 50%;
+	padding: 0;
+	margin: 0;
+	border: 0;
+	width: 100%;
+	text-align: center;
+	background-color: transparent;
+	color: #FFF;
+	text-shadow: 1px 1px #333;
+}
+
+.infobox {
+	position: relative;
+	left: 0;
+	top: 0;
+	padding: 5px;
+	margin: 0;
+	border: 0;
+	width: 200px;
+	background-color: transparent;
+	color: #FFF;
+	text-shadow: 1px 1px #333;
+}
+
+.introvideo {
+	width: 100%;
+	height: 100%;
+}
+
+.ghost {
+	position: absolute;
+	width: 64px;
+	height: 64px;
+	top: 10%;
+	left: 50%;
+    -webkit-animation: backandforth 2s linear infinite;
+    -webkit-animation-iteration-count:infinite;
+    animation: backandforth 2s linear infinite;
+    animation-iteration-count:infinite;
+}
+
+@-webkit-keyframes backandforth {0%{left:0;} 50%{left:100%;} 100%{left:0;}}
+@keyframes backandforth {0%{left:0;} 50%{left:100%;} 100%{left:0;}}
